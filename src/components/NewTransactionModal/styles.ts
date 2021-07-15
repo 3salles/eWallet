@@ -44,3 +44,35 @@ export const Input = styled.input`
     margin-top: 1rem;
   }
 `
+export const TransactionTypeContainer = styled.div`
+  margin: 1rem 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+`
+
+export const TransactionButton = styled.button`
+  height: 4rem;
+  border: 1px solid #D7D7D7;
+  border-radius: 0.25rem;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover{
+    border-color: #AAA;
+  }
+
+  img {
+    width: 20px;
+    height: 20px;
+  }
+
+  span {
+    display: inline-block;
+    margin-left: 1rem;
+    font-size: 1rem;
+    color: var(--text-title);
+  }
+`

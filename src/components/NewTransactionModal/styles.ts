@@ -1,5 +1,15 @@
-import styled from "styled-components";
-import { darken } from "polished"
+import styled, { css } from "styled-components";
+import { darken, transparentize } from "polished"
+
+interface TransactionButtonProps {
+  isActive: boolean;
+  activeColor: 'green' | 'red';
+}
+
+const colors = {
+  green: '#33CC95',
+  red: '#E52E4D'
+}
 
 export const Container = styled.form`
   h2 {
@@ -52,7 +62,7 @@ export const TransactionTypeContainer = styled.div`
   gap: 0.5rem;
 `
 
-export const TransactionButton = styled.button`
+export const TransactionButton = styled.button<TransactionButtonProps>`
   height: 4rem;
   border: 1px solid #D7D7D7;
   border-radius: 0.25rem;
@@ -65,6 +75,11 @@ export const TransactionButton = styled.button`
   &:hover{
     border-color: ${darken(0.1, '#D7D7D7')};
   }
+
+  ${({isActive, activeColor}) => isActive && css`
+  background: ${transparentize(0.9, colors[activeColor])};
+  border: 0;
+  `}
 
   img {
     width: 20px;

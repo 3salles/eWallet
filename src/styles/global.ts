@@ -3,12 +3,14 @@ import { createGlobalStyle } from 'styled-components'
 export const GlobalStyle = createGlobalStyle`
   :root {
     --red: #E52E4D;
-    --green: #4DB17F;
+    --green: #33CC95;
     --dark-moderate-blue: #525298; // blue
     --blue-light: #6933FF;
 
     --text-title: #363F5F;
     --text-body: #969CB3;
+
+    --input-background: #E7E9EE;
 
     --background: #F3F3F7;
     --shape: #FFFFFF;
@@ -72,5 +74,17 @@ export const GlobalStyle = createGlobalStyle`
     padding: 3rem;
     position: relative;
     border-radius: 0.25rem;
+  }
+  .react-modal-close {
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    border: 0;
+    background: transparent;
+    transition: filter 0.2s;
+
+    &:hover{
+      filter: brightness(0.8);
+    }
   }
 `

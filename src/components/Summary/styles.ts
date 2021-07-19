@@ -31,4 +31,8 @@ export const Card = styled.div`
     background: var(--green);
     color: #FFF;
   }
+
+  &.withdraw-background {
+    color: var(--red);
+  }
 `
